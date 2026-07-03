@@ -1,0 +1,29 @@
+[
+  {
+    "id": "demo-schedule-1",
+    "member_id": "bbungchi",
+    "member_name": "연토리뿡치",
+    "title": "정규 저녁 방송",
+    "details": "공개 데모용 일정 데이터입니다.",
+    "starts_at": "2026-07-03T20:00:00.000+09:00",
+    "status": "scheduled"
+  },
+  {
+    "id": "demo-schedule-2",
+    "member_id": "cocomizzang",
+    "member_name": "코코미짱",
+    "title": "주말 게임 합방",
+    "details": "원본 API 응답 형태를 유지한 정적 fixture입니다.",
+    "starts_at": "2026-07-04T21:30:00.000+09:00",
+    "status": "scheduled"
+  },
+  {
+    "id": "demo-schedule-3",
+    "member_id": "inorisama",
+    "member_name": "마왕이노리!",
+    "title": "심야 토크",
+    "details": "민감한 계정 정보 없이 표시되는 샘플입니다.",
+    "starts_at": "2026-07-05T23:00:00.000+09:00",
+    "status": "tentative"
+  }
+]

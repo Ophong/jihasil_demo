@@ -1,0 +1,47 @@
+{
+  "range": "7d",
+  "limit": 6,
+  "memberId": null,
+  "generatedAt": "2026-07-03T11:30:00.000+09:00",
+  "items": [
+    {
+      "id": "demo-session-1",
+      "member_id": "bbungchi",
+      "member_name": "연토리뿡치",
+      "session_title": "저녁 방송 준비실",
+      "session_category": "Just Chatting",
+      "short_summary": "공지와 근황을 중심으로 진행된 방송",
+      "peak_viewers": 312,
+      "title_change_count": 2,
+      "category_change_count": 1,
+      "source_url": "https://www.sooplive.co.kr/",
+      "started_at": "2026-07-03T19:30:00.000+09:00"
+    },
+    {
+      "id": "demo-session-2",
+      "member_id": "cocomizzang",
+      "member_name": "코코미짱",
+      "session_title": "게임 한 판만 더",
+      "session_category": "Game",
+      "short_summary": "시청자 참여형 게임 진행",
+      "peak_viewers": 227,
+      "title_change_count": 1,
+      "category_change_count": 0,
+      "source_url": "https://www.sooplive.co.kr/",
+      "started_at": "2026-07-03T20:15:00.000+09:00"
+    },
+    {
+      "id": "demo-session-3",
+      "member_id": "inorisama",
+      "member_name": "마왕이노리!",
+      "session_title": "심야 토크",
+      "session_category": "Talk",
+      "short_summary": "다음 일정과 클립 회고",
+      "peak_viewers": 190,
+      "title_change_count": 0,
+      "category_change_count": 1,
+      "source_url": "https://www.sooplive.co.kr/",
+      "started_at": "2026-07-02T23:00:00.000+09:00"
+    }
+  ]
+}

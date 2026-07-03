@@ -1,0 +1,29 @@
+[
+  {
+    "id": "demo-post-1",
+    "source": "naver_cafe",
+    "title": "오늘 방송 공지",
+    "writer": "운영 알림",
+    "url": "https://example.com/jihasil-demo/post-1",
+    "published_at": "2026-07-03T09:10:00.000+09:00",
+    "fetched_at": "2026-07-03T09:15:00.000+09:00"
+  },
+  {
+    "id": "demo-post-2",
+    "source": "naver_cafe",
+    "title": "클립 모음 업데이트",
+    "writer": "운영 알림",
+    "url": "https://example.com/jihasil-demo/post-2",
+    "published_at": "2026-07-03T10:25:00.000+09:00",
+    "fetched_at": "2026-07-03T10:30:00.000+09:00"
+  },
+  {
+    "id": "demo-post-3",
+    "source": "naver_cafe",
+    "title": "주말 일정 안내",
+    "writer": "운영 알림",
+    "url": "https://example.com/jihasil-demo/post-3",
+    "published_at": "2026-07-02T22:05:00.000+09:00",
+    "fetched_at": "2026-07-02T22:10:00.000+09:00"
+  }
+]

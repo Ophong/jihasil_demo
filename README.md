@@ -1,29 +1,27 @@
-# Jihasil Demo
+# Jihasil HTML Edition Demo
 
-Public-safe portfolio version of the Jihasil stream status dashboard.
+Public-safe copy of the original Jihasil HTML Edition.
 
-This repository is intentionally **not** the private production app. It is a static demo that keeps the product story and UI behavior while removing every billable or sensitive runtime dependency.
+The visible frontend files are copied from the original `html-version/site` work. The only runtime adaptation is for GitHub Pages: the original `/api/*` calls are served by static JSON fixture files in this repository, so the pages keep the same fetch/render flow without requiring DigitalOcean, Supabase, cron jobs, or private credentials.
 
-## What This Shows
+## What This Contains
 
-- A four-member live status dashboard with deterministic sample data.
-- Schedule and operations views that mirror the original product workflow.
-- A case-study section explaining the private architecture: Python collector -> Supabase contract -> Next.js dashboard.
-- A public security model suitable for GitHub Pages, Cloudflare Pages, or Vercel Hobby.
+- `index.html`, `recap.html`, and `clips.html` from the original HTML Edition.
+- Original shared `assets/styles.css` and `assets/app.js` rendering logic.
+- Static `/api/*` fixture responses shaped like the original Next API routes.
+- No production `.env`, service-role key, OAuth secret, server IP, scheduled workflow, or private collector runtime.
 
-## What Was Removed
+## Demo URL
 
-- DigitalOcean Droplet cron runner
-- Supabase service role access
-- Google OAuth/admin session flows
-- GitHub Actions scheduled workflows
-- External API calls, analytics, third-party scripts, remote fonts, and live channel identifiers
+GitHub Pages:
+
+```text
+https://ophong.github.io/jihasil_demo/
+```
 
 ## Run Locally
 
-Open `index.html` directly in a browser.
-
-Optional local server:
+Use a local static server from the repository root:
 
 ```bash
 python -m http.server 8080
@@ -31,7 +29,7 @@ python -m http.server 8080
 
 Then open `http://127.0.0.1:8080`.
 
-No install step is required.
+Opening the HTML files directly is not recommended because the original runtime uses `fetch("/api/*")`.
 
 ## Deploy
 
@@ -53,10 +51,9 @@ Import the repository as a static site. The output directory is the repository r
 The demo must remain safe to publish:
 
 - Keep credentials and `.env` files out of the repository.
-- Keep all data fictional or anonymized.
+- Keep API fixture data static and public-safe.
 - Do not add scheduled workflows.
-- Do not add external scripts, analytics, or live API requests.
+- Do not add external scripts, analytics, or live backend API requests.
 - Do not include server IPs, deploy keys, OAuth secrets, Supabase service-role keys, or admin allowlists.
 
 See [docs/public-safety-checklist.md](docs/public-safety-checklist.md).
-

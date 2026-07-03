@@ -3,125 +3,85 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; upgrade-insecure-requests"
-    />
-    <meta
-      name="description"
-      content="Jihasil Demo is a public-safe portfolio version of a stream status dashboard, running entirely from anonymized local sample data."
-    />
-    <title>Jihasil Demo | Public-safe portfolio dashboard</title>
-    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <title>지하실 HTML Edition</title>
+    <meta name="description" content="지하실 라이브 현황과 스케줄을 정적 HTML 버전으로 확인하는 페이지" />
     <link rel="stylesheet" href="./assets/styles.css" />
   </head>
-  <body>
-    <a class="skip-link" href="#main">본문으로 이동</a>
-    <header class="site-header" aria-label="Jihasil Demo navigation">
-      <div class="brand-lockup">
-        <span class="brand-mark" aria-hidden="true">J</span>
-        <div>
-          <p class="brand-name">Jihasil Demo</p>
-          <p class="brand-subtitle">public-safe portfolio build</p>
-        </div>
-      </div>
-      <nav class="top-nav" aria-label="Primary">
-        <a href="#dashboard">Dashboard</a>
-        <a href="#case-study">Case Study</a>
-        <a href="#security">Security</a>
-      </nav>
-      <a class="icon-link" href="https://github.com/Ophong/jihasil_demo" rel="noopener noreferrer" target="_blank">
-        <span class="icon-dot" aria-hidden="true"></span>
-        GitHub
-      </a>
-    </header>
-
-    <main id="main">
-      <section class="hero-band" id="dashboard" aria-labelledby="hero-title">
+  <body data-page="home">
+    <div class="shell">
+      <header class="hero">
         <div class="hero-copy">
-          <p class="mode-line">Demo mode: no live APIs, no secrets, no cron</p>
-          <h1 id="hero-title">방송 상태 대시보드를 공개 가능한 포트폴리오 데모로 정리했습니다.</h1>
-          <p class="hero-text">
-            실제 운영판의 데이터 계약과 화면 흐름은 유지하되, 모든 정보는 익명 샘플 데이터로 고정했습니다.
-            DigitalOcean, Supabase service role, Google auth, GitHub Actions cron은 이 공개판에 포함되지 않습니다.
-          </p>
-          <div class="hero-actions" aria-label="Demo actions">
-            <button class="primary-action" type="button" id="sample-refresh">
-              <span class="button-icon" aria-hidden="true"></span>
-              샘플 새로고침
-            </button>
-            <a class="secondary-action" href="#security">공개 안전 조건 보기</a>
-          </div>
-          <p class="refresh-note" id="refresh-note" aria-live="polite">샘플 데이터가 준비되었습니다.</p>
+          <p class="eyebrow">Jihasil HTML Edition</p>
+          <h1>지하실</h1>
+          <p class="hero-text">라이브 상태, 공개 일정, 최근 피드를 순수 HTML/CSS/JS로 재구성한 별도 버전입니다.</p>
         </div>
-        <div class="hero-panel" aria-label="Demo system snapshot">
-          <div class="panel-header">
-            <p>Pipeline Snapshot</p>
-            <span>static</span>
-          </div>
-          <div id="metric-grid" class="metric-grid"></div>
-          <div class="pipeline-strip" aria-label="Original architecture">
-            <span>Python collector</span>
-            <span>Supabase contract</span>
-            <span>Next.js dashboard</span>
-          </div>
+        <div class="hero-status">
+          <p class="status-label">업데이트</p>
+          <p class="status-value" data-updated-label>불러오는 중</p>
+          <p class="status-meta">기존 API를 그대로 조회합니다.</p>
         </div>
-      </section>
+      </header>
 
-      <section class="workspace-shell" aria-label="Dashboard demo workspace">
-        <aside class="side-rail" aria-label="Demo controls">
-          <p class="rail-title">Views</p>
-          <button class="rail-button is-active" type="button" data-view="board">
-            <span aria-hidden="true"></span>
-            Live board
-          </button>
-          <button class="rail-button" type="button" data-view="schedule">
-            <span aria-hidden="true"></span>
-            Schedule
-          </button>
-          <button class="rail-button" type="button" data-view="ops">
-            <span aria-hidden="true"></span>
-            Ops notes
-          </button>
-        </aside>
+      <nav class="topnav">
+        <a class="nav-link is-active" href="./index.html">홈</a>
+        <a class="nav-link" href="./recap.html">오늘의 소식</a>
+        <a class="nav-link" href="./clips.html">클립</a>
+      </nav>
 
-        <section class="workspace-main" aria-live="polite">
-          <div class="toolbar">
+      <main class="layout">
+        <section class="panel panel-main">
+          <div class="section-head">
             <div>
-              <p class="toolbar-kicker">Anonymized stream team</p>
-              <h2 id="workspace-title">Live board</h2>
+              <p class="eyebrow">Live Status</p>
+              <h2>방송 상태</h2>
             </div>
-            <div class="segmented-control" aria-label="Member status filter">
-              <button class="is-selected" type="button" data-filter="all">All</button>
-              <button type="button" data-filter="live">Live</button>
-              <button type="button" data-filter="offline">Offline</button>
-            </div>
+            <span class="chip" data-live-count>0 live</span>
           </div>
-          <div id="workspace-content" class="workspace-content"></div>
+          <div class="card-grid" data-live-grid>
+            <div class="empty-card">라이브 상태를 불러오는 중입니다.</div>
+          </div>
         </section>
-      </section>
 
-      <section class="case-study-section" id="case-study" aria-labelledby="case-study-title">
-        <div class="section-heading">
-          <p class="section-label">Case study</p>
-          <h2 id="case-study-title">운영형 프로젝트를 데모형 산출물로 바꾼 기준</h2>
-        </div>
-        <div class="case-grid" id="case-grid"></div>
-      </section>
+        <section class="panel panel-side">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Schedule</p>
+              <h2>공개 일정</h2>
+            </div>
+            <span class="chip" data-schedule-count>0 entries</span>
+          </div>
+          <div class="stack" data-schedule-list>
+            <div class="empty-card">일정을 불러오는 중입니다.</div>
+          </div>
+        </section>
 
-      <section class="security-section" id="security" aria-labelledby="security-title">
-        <div class="section-heading">
-          <p class="section-label">Security model</p>
-          <h2 id="security-title">public repo에 올려도 되는 조건만 남겼습니다.</h2>
-        </div>
-        <div id="security-list" class="security-list"></div>
-      </section>
-    </main>
+        <section class="panel panel-wide">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Recent Feed</p>
+              <h2>최근 피드</h2>
+            </div>
+            <a class="chip chip-link" href="./recap.html">소식 페이지로</a>
+          </div>
+          <div class="news-grid" data-post-grid>
+            <div class="empty-card">최근 글을 불러오는 중입니다.</div>
+          </div>
+        </section>
 
-    <footer class="site-footer">
-      <p>Jihasil Demo ships as static files only. There is no backend, no scheduler, and no credential path.</p>
-      <a href="./docs/public-safety-checklist.md">Public safety checklist</a>
-    </footer>
+        <section class="panel panel-wide">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Broadcast Summary</p>
+              <h2>최근 방송 요약</h2>
+            </div>
+            <a class="chip chip-link" href="./clips.html">클립 보기</a>
+          </div>
+          <div class="summary-grid" data-summary-grid>
+            <div class="empty-card">방송 요약을 불러오는 중입니다.</div>
+          </div>
+        </section>
+      </main>
+    </div>
 
     <script src="./assets/app.js" defer></script>
   </body>
