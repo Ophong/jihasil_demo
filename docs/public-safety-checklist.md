@@ -1,6 +1,6 @@
 # Public Safety Checklist
 
-This checklist defines when the Jihasil demo is safe to publish as a public repository.
+This checklist defines when the 팬사이트 demo is safe to publish as a public repository.
 
 ## Runtime
 

@@ -11,7 +11,7 @@
     "created_at": "2026-03-06T02:00:00.000Z",
     "updated_at": "2026-03-06T02:00:00.000Z",
     "member_name": "Creator B",
-    "profile_image": "/jihasil_demo/avatars/creator-b.svg"
+    "profile_image": "/creator_fansite/avatars/creator-b.svg"
   },
   {
     "id": "mock-schedule-2",
@@ -25,6 +25,6 @@
     "created_at": "2026-03-06T01:00:00.000Z",
     "updated_at": "2026-03-06T01:00:00.000Z",
     "member_name": "Creator C",
-    "profile_image": "/jihasil_demo/avatars/creator-c.svg"
+    "profile_image": "/creator_fansite/avatars/creator-c.svg"
   }
 ]

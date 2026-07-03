@@ -1,6 +1,6 @@
-# Jihasil Demo
+# 팬사이트 Demo
 
-Public-safe static export of the `jiha.app` frontend.
+Public-safe static export of the 팬사이트 frontend.
 
 This repository is a portfolio demo. The visible pages are built from the original Next.js frontend (`web/app`) rather than a redesigned mock page or an alternate static prototype. Server-side data, private credentials, cron jobs, Supabase writes, and Google OAuth are not included.
 
@@ -9,12 +9,12 @@ This repository is a portfolio demo. The visible pages are built from the origin
 GitHub Pages:
 
 ```text
-https://ophong.github.io/jihasil_demo/
+https://ophong.github.io/creator_fansite/
 ```
 
 ## What This Contains
 
-- Static export of the original `jiha.app` home frontend.
+- Static export of the original 팬사이트 home frontend.
 - Exported `/clips/`, `/recap/`, and member detail pages for the four public members.
 - Original Tailwind/Next visual structure, cards, mobile layout, tabs, filters, and GSAP motion.
 - Public-safe static API fixtures for client-only reads such as `/api/clips/top` and logged-out schedule auth state.
@@ -38,10 +38,10 @@ python -m http.server 8080
 Then open:
 
 ```text
-http://127.0.0.1:8080/jihasil_demo/
+http://127.0.0.1:8080/creator_fansite/
 ```
 
-For simple local inspection from the repository root, any static server is fine, but GitHub Pages uses the `/jihasil_demo/` base path.
+For simple local inspection from the repository root, any static server is fine, but GitHub Pages uses the `/creator_fansite/` base path.
 
 ## Public Safety Contract
 
