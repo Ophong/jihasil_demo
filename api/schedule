@@ -10,8 +10,8 @@
     "source_url": null,
     "created_at": "2026-03-06T02:00:00.000Z",
     "updated_at": "2026-03-06T02:00:00.000Z",
-    "member_name": "연토리뿡치",
-    "profile_image": "https://profile.img.sooplive.co.kr/LOGO/bb/bbungchi/bbungchi.jpg"
+    "member_name": "Creator B",
+    "profile_image": "/jihasil_demo/avatars/creator-b.svg"
   },
   {
     "id": "mock-schedule-2",
@@ -24,7 +24,7 @@
     "source_url": null,
     "created_at": "2026-03-06T01:00:00.000Z",
     "updated_at": "2026-03-06T01:00:00.000Z",
-    "member_name": "코코미짱",
-    "profile_image": "https://profile.img.sooplive.co.kr/LOGO/co/cocomizzang/cocomizzang.jpg"
+    "member_name": "Creator C",
+    "profile_image": "/jihasil_demo/avatars/creator-c.svg"
   }
 ]
