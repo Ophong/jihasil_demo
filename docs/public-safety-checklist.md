@@ -1,39 +1,34 @@
 # Public Safety Checklist
 
-This checklist defines when the Jihasil HTML Edition demo is safe to publish as a public repository.
+This checklist defines when the Jihasil demo is safe to publish as a public repository.
 
 ## Runtime
 
-- [x] Static files only.
+- [x] Static GitHub Pages export.
 - [x] No backend server required for the public demo.
-- [x] Original `/api/*` calls are served by static files in this repository.
 - [x] No scheduled jobs.
 - [x] No DigitalOcean Droplet, reserved IP, volume, load balancer, or database dependency.
-- [x] No Supabase connection.
-- [x] No Google OAuth flow.
+- [x] No Supabase connection or service-role key.
+- [x] Google OAuth is disabled in the public demo.
+
+## Frontend Fidelity
+
+- [x] Home, clips, recap, and member pages are generated from the original Next.js frontend.
+- [x] Earlier alternate static prototypes are not used as the visible demo surface.
+- [x] Client interactions remain: dashboard/schedule tabs, feed filters, clip sorting, member page navigation, and motion.
 
 ## Data
 
 - [x] Static fixture rows only.
-- [x] Original API response shapes are preserved for the HTML Edition renderer.
 - [x] No production API dumps.
-- [x] No access tokens, cookies, server IPs, or private admin identifiers.
-- [x] Links use generic public placeholders rather than private production targets.
-
-## Browser Security
-
-- [x] No external scripts.
-- [x] No external fonts.
-- [x] No analytics.
-- [x] No iframes.
-- [x] No forms.
-- [x] Dynamic values are escaped by the original renderer before insertion.
+- [x] No access tokens, cookies, server IPs, private admin identifiers, or write-capable endpoints.
+- [x] Schedule auth fixture returns logged-out/read-only state.
 
 ## Repository Safety
 
 - [x] `.env` and `.env.*` are ignored.
 - [x] No GitHub Actions workflows are included.
-- [x] No package install is required.
+- [x] No package install is required to view the published demo.
 - [x] No service-role key placeholder is included.
 - [x] No DigitalOcean token placeholder is included.
 

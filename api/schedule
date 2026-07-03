@@ -1,29 +1,30 @@
 [
   {
-    "id": "demo-schedule-1",
+    "id": "mock-schedule-1",
     "member_id": "bbungchi",
+    "title": "밤 방송 합방 가능성",
+    "details": "시간은 변동될 수 있습니다.",
+    "starts_at": "2026-03-06T12:00:00.000Z",
+    "ends_at": "2026-03-06T15:00:00.000Z",
+    "status": "tentative",
+    "source_url": null,
+    "created_at": "2026-03-06T02:00:00.000Z",
+    "updated_at": "2026-03-06T02:00:00.000Z",
     "member_name": "연토리뿡치",
-    "title": "정규 저녁 방송",
-    "details": "공개 데모용 일정 데이터입니다.",
-    "starts_at": "2026-07-03T20:00:00.000+09:00",
-    "status": "scheduled"
+    "profile_image": "https://profile.img.sooplive.co.kr/LOGO/bb/bbungchi/bbungchi.jpg"
   },
   {
-    "id": "demo-schedule-2",
+    "id": "mock-schedule-2",
     "member_id": "cocomizzang",
+    "title": "저녁 방송",
+    "details": "게임 또는 토크 예정",
+    "starts_at": "2026-03-06T10:00:00.000Z",
+    "ends_at": "2026-03-06T13:00:00.000Z",
+    "status": "scheduled",
+    "source_url": null,
+    "created_at": "2026-03-06T01:00:00.000Z",
+    "updated_at": "2026-03-06T01:00:00.000Z",
     "member_name": "코코미짱",
-    "title": "주말 게임 합방",
-    "details": "원본 API 응답 형태를 유지한 정적 fixture입니다.",
-    "starts_at": "2026-07-04T21:30:00.000+09:00",
-    "status": "scheduled"
-  },
-  {
-    "id": "demo-schedule-3",
-    "member_id": "inorisama",
-    "member_name": "마왕이노리!",
-    "title": "심야 토크",
-    "details": "민감한 계정 정보 없이 표시되는 샘플입니다.",
-    "starts_at": "2026-07-05T23:00:00.000+09:00",
-    "status": "tentative"
+    "profile_image": "https://profile.img.sooplive.co.kr/LOGO/co/cocomizzang/cocomizzang.jpg"
   }
 ]

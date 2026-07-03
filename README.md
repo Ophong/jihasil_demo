@@ -1,15 +1,8 @@
-# Jihasil HTML Edition Demo
+# Jihasil Demo
 
-Public-safe copy of the original Jihasil HTML Edition.
+Public-safe static export of the `jiha.app` frontend.
 
-The visible frontend files are copied from the original `html-version/site` work. The only runtime adaptation is for GitHub Pages: the original `/api/*` calls are served by static JSON fixture files in this repository, so the pages keep the same fetch/render flow without requiring DigitalOcean, Supabase, cron jobs, or private credentials.
-
-## What This Contains
-
-- `index.html`, `recap.html`, and `clips.html` from the original HTML Edition.
-- Original shared `assets/styles.css` and `assets/app.js` rendering logic.
-- Static `/api/*` fixture responses shaped like the original Next API routes.
-- No production `.env`, service-role key, OAuth secret, server IP, scheduled workflow, or private collector runtime.
+This repository is a portfolio demo. The visible pages are built from the original Next.js frontend (`web/app`) rather than a redesigned mock page or an alternate static prototype. Server-side data, private credentials, cron jobs, Supabase writes, and Google OAuth are not included.
 
 ## Demo URL
 
@@ -19,41 +12,43 @@ GitHub Pages:
 https://ophong.github.io/jihasil_demo/
 ```
 
+## What This Contains
+
+- Static export of the original `jiha.app` home frontend.
+- Exported `/clips/`, `/recap/`, and member detail pages for the four public members.
+- Original Tailwind/Next visual structure, cards, mobile layout, tabs, filters, and GSAP motion.
+- Public-safe static API fixtures for client-only reads such as `/api/clips/top` and logged-out schedule auth state.
+
+## What Is Not Included
+
+- DigitalOcean runner or cron jobs.
+- Supabase service-role access or production `.env` files.
+- Google OAuth login in the public demo.
+- Admin schedule review or market-alert admin surfaces.
+- Live backend API calls.
+
 ## Run Locally
 
-Use a local static server from the repository root:
+Serve this repository from a parent folder so the path matches GitHub Pages:
 
 ```bash
 python -m http.server 8080
 ```
 
-Then open `http://127.0.0.1:8080`.
+Then open:
 
-Opening the HTML files directly is not recommended because the original runtime uses `fetch("/api/*")`.
+```text
+http://127.0.0.1:8080/jihasil_demo/
+```
 
-## Deploy
-
-### GitHub Pages
-
-1. Go to repository `Settings -> Pages`.
-2. Choose `Deploy from a branch`.
-3. Select `main` and `/root`.
-4. Save.
-
-This project does not include a GitHub Actions workflow, so it does not create scheduled jobs or background usage.
-
-### Vercel or Cloudflare Pages
-
-Import the repository as a static site. The output directory is the repository root.
+For simple local inspection from the repository root, any static server is fine, but GitHub Pages uses the `/jihasil_demo/` base path.
 
 ## Public Safety Contract
-
-The demo must remain safe to publish:
 
 - Keep credentials and `.env` files out of the repository.
 - Keep API fixture data static and public-safe.
 - Do not add scheduled workflows.
-- Do not add external scripts, analytics, or live backend API requests.
+- Do not add live backend API requests.
 - Do not include server IPs, deploy keys, OAuth secrets, Supabase service-role keys, or admin allowlists.
 
 See [docs/public-safety-checklist.md](docs/public-safety-checklist.md).
